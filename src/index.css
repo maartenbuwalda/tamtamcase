@@ -9,6 +9,10 @@ body {
   background-attachment: fixed;
 }
 
+input, textarea, select, button {
+  font-family: 'Lato';
+}
+
 h1, h2, h3 {
   font-size: 2rem;
   text-transform: uppercase;
