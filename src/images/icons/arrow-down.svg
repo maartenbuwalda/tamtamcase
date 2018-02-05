@@ -1,0 +1,17 @@
+<svg width="13px" height="8px" viewBox="0 0 13 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-319.000000, -635.000000)" fill="#FFFFFF" id="UI_icons">
+            <g transform="translate(150.000000, 527.000000)">
+                <g id="Icons" transform="translate(0.000000, 87.000000)">
+                    <g id="arrow_down" transform="translate(150.000000, 0.000000)">
+                        <rect id="bg" opacity="0" x="0" y="0" width="50" height="50"></rect>
+                        <path d="M24.0426601,28.3221664 C24.0426601,28.3221664 24.5699448,29 25.0295916,29 C25.4703289,29 26.0179777,28.3221664 26.0179777,28.3221664 L26.0274324,28.3119844 L30.7999045,22.9314984 C31.1475488,22.4907612 31.1475488,21.7700175 30.7999045,21.3300075 C30.451533,20.8899975 29.8813382,20.8899975 29.5336939,21.3300075 L25.0303189,25.8348372 L20.5276711,21.3300075 C20.1785722,20.8899975 19.609832,20.8899975 19.2607332,21.3300075 C18.9130889,21.7700175 18.9130889,22.4907612 19.2607332,22.9314984 L24.0332053,28.3119844 L24.0426601,28.3221664"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

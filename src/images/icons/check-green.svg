@@ -1,0 +1,17 @@
+<svg width="25px" height="20px" viewBox="0 0 25 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Styleguide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-462.000000, -629.000000)" id="UI_icons">
+            <g transform="translate(150.000000, 527.000000)">
+                <g id="Icons" transform="translate(0.000000, 87.000000)">
+                    <g id="check_icon" transform="translate(300.000000, 0.000000)">
+                        <rect id="bg" fill="#FFFFFF" opacity="0" x="0" y="0" width="50" height="50"></rect>
+                        <path d="M20.5401796,33.8048859 L20.1603292,34.1847362 L12.3345238,26.3589307 L14.9426371,23.7508174 L20.3030625,29.1112428 L33.7264104,15.6878948 L36.3345238,18.2960082 L20.6829128,33.9476191 L20.5401796,33.8048859 Z" id="Check-Icon" fill="#7BDB4C"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
