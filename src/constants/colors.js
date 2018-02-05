@@ -5,4 +5,7 @@ const colors = {
     steelBlue: '#789199',
     darkGray: '#555D60',
     mediumGray: '#8E8E8E',
+    white: '#FFFFFF'
 }
+
+export default colors
