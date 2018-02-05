@@ -18,7 +18,9 @@ const instagramFeed = store => next => action => {
       .then((response) => {
         dispatch({
           type: GET_INSTAGRAM_FEED_SUCCESS,
-          payload: { data: response.data }
+          payload: { 
+            data: response.data.data
+          }
         })
       })
       .catch((error) => {

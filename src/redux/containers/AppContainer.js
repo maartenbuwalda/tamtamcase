@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { getInstagramFeed } from '../actions'
 
 const mapStateToProps = state => {return {
-  instagramFeed: state.instagramFeed
 }}
 
 const mapDispatchToProps = dispatch => {return {

@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import Home from './Home'
+import HomeContainer from '../redux/containers/HomeContainer'
 import People from './People'
 import Contact from './Contact'
 import styled from 'styled-components'
-import { Switch, Route, BrowserRouter } from 'react-router-dom'
+import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom'
 
 const AppWrapper = styled.div`
   display: grid;
@@ -31,9 +31,10 @@ class App extends Component {
         <AppWrapper>
           <Header/>
           <Switch>
-            <Route exact path='/' render={ () => <Home/> }/>
-            <Route exact path='/people' render={ () => <People/> }/>
-            <Route exact path='/contact' render={ () => <Contact/> }/>
+            <Redirect exact from='/' to='/home'/>
+            <Route path='/home' render={ () => <HomeContainer/> }/>
+            <Route path='/people' render={ () => <People/> }/>
+            <Route path='/contact' render={ () => <Contact/> }/>
           </Switch>
           <Footer/>
         </AppWrapper>

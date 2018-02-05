@@ -16,7 +16,10 @@ function instagramFeedReducer(state = defaultState, action) {
     case GET_INSTAGRAM_FEED_START:
       return { ...state, isLoading: true }
     case GET_INSTAGRAM_FEED_SUCCESS:
-      return { ...state, data: action.payload.data }
+      return {
+        ...state, 
+        data: action.payload.data
+      }
     case GET_INSTAGRAM_FEED_ERROR:
       return { ...state, error: action.payload.error }
     case GET_INSTAGRAM_FEED_END:

@@ -119,7 +119,7 @@ class Header extends Component {
           <img src={logo}/>
         </IconWrapper>
         <Navigation>
-          <NavLink onClick={this._closeMenu} activeClassName='selected' to='/'>Home</NavLink>
+          <NavLink onClick={this._closeMenu} activeClassName='selected' to='/home'>Home</NavLink>
           <NavLink onClick={this._closeMenu} activeClassName='selected' to='/people'>People</NavLink>
           <NavLink onClick={this._closeMenu} activeClassName='selected' to='/contact'>Contact</NavLink>
         </Navigation>
