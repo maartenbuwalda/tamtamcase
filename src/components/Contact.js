@@ -83,7 +83,9 @@ class Contact extends Component {
             <Input type='email' placeholder='Your e-mail address'/>
             <Input type='tel' placeholder='Your phone number (optional)'/>
           </InputGroup>
-          <TextArea rows='6' placeholder='Your message...'/>
+          <InputGroup>
+            <TextArea rows='6' placeholder='Your message...'/>
+          </InputGroup>
         </ContactForm>
         <Button type='red'>Send</Button>
       </ContactWrapper>
