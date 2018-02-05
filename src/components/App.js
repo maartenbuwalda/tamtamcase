@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import Header from './Header'
 import Footer from './Footer'
+import Home from './Home'
+import People from './People'
+import Contact from './Contact'
 import styled from 'styled-components'
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
 
 const AppWrapper = styled.div`
   display: grid;
@@ -18,11 +22,17 @@ const AppWrapper = styled.div`
 class App extends Component {
   render() {
     return (
-      <AppWrapper>
-        <Header/>
-        <div/>
-        <Footer/>
-      </AppWrapper>
+      <BrowserRouter>
+        <AppWrapper>
+          <Header/>
+          <Switch>
+            <Route exact path='/' render={ () => <Home/> }/>
+            <Route exact path='/people' render={ () => <People/> }/>
+            <Route exact path='/contact' render={ () => <Contact/> }/>
+          </Switch>
+          <Footer/>
+        </AppWrapper>
+      </BrowserRouter>
     );
   }
 }
