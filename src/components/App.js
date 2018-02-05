@@ -20,6 +20,11 @@ const AppWrapper = styled.div`
 `
 
 class App extends Component {
+  componentWillMount(){
+    this.props.getInstagramFeed()
+    // console.log('hello')
+  }
+
   render() {
     return (
       <BrowserRouter>
