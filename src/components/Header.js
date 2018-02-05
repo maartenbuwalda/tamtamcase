@@ -8,6 +8,7 @@ import { media } from '../constants/breakpoints'
 import { NavLink } from 'react-router-dom'
 
 const HeaderWrapper = styled.div`
+  grid-area: 'header';
   background-color: ${colors.black};
   max-height: 4rem;
   height: 4rem;
@@ -59,6 +60,8 @@ const Navigation = styled.nav`
   height: calc(100vh - 4.15rem);
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 2;
   
   display: flex;
   transition: all .3s;
