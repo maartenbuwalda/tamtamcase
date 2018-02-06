@@ -33,29 +33,16 @@ const ContactForm = styled.form`
   max-width: 620px;
   display: grid;
   background: rgba(255, 255, 255, 0.2);
-  padding: 2rem 0;
-
-  input, textarea {
-    margin: auto;
-    width: calc(100% - 4rem);
-  }
+  padding: 2rem 0 1rem;
 
   textarea {
-    margin-top: 1rem;
-  }
-
-  input {
-    margin-bottom: 1rem;
+    margin: 1rem auto 0;
+    width: calc(100% - 2rem);
   }
 
   ${media.tablet`
     grid-row-gap: 1rem;
     margin-bottom: 2rem;
-
-    input {
-      width: calc(50% - 3.5rem);
-      margin: 0 .5rem;
-    }
   `}
 `
 
@@ -63,9 +50,19 @@ const InputGroup = styled.div`
   display: flex;
   flex-direction: column;
 
+  div {
+    width: calc(100% - 2rem);
+    margin: 0 auto 1rem;
+  }
+
   ${media.tablet`
     flex-direction: row;
     justify-content: center;
+
+    &.multi-group div {
+      width: calc(50% - 1.5rem);
+      margin: 0 .5rem;
+    }
   `}
 `
 
@@ -94,7 +91,7 @@ class Contact extends Component {
       <ContactWrapper>
         <h1>We would love to hear from you</h1>
         <ContactForm>
-          <InputGroup>
+          <InputGroup className='multi-group'>
             <Input 
               error={errors.firstName}
               errorText='We need your first name.'
@@ -110,7 +107,7 @@ class Contact extends Component {
               type='name' 
               placeholder='Last name'/>
           </InputGroup>
-          <InputGroup>
+          <InputGroup className='multi-group'>
             <Input
               error={errors.email}
               errorText='Please use a valid e-mail address.'

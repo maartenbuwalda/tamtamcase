@@ -1,11 +1,10 @@
 import React  from 'react'
 import styled from 'styled-components'
 import colors from '../constants/colors'
-
-const TextAreaWrapper = styled.textarea`
-`
+import ErrorTooltip from './ErrorTooltip'
 
 const TextAreaInput = styled.textarea`
+  // width: calc(100% - 2rem);
   border: 0;
   display: block;
   padding: 1rem;
@@ -14,14 +13,17 @@ const TextAreaInput = styled.textarea`
 
 const TextArea = (props) => {
   return (
-    <TextAreaWrapper>
+    <div>
       <TextAreaInput
         id={props.id}
         onChange={props.onChange} 
         rows={props.rows} 
         type={props.type} 
         placeholder={props.placeholder}/>
-    </TextAreaWrapper>
+      { props.error &&
+        <ErrorTooltip>{props.errorText}</ErrorTooltip>
+      }
+    </div>
   )
 }
 

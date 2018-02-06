@@ -1,11 +1,10 @@
 import React  from 'react'
 import styled from 'styled-components'
 import colors from '../constants/colors'
-
-const InputWrapper = styled.div`
-`
+import ErrorTooltip from './ErrorTooltip'
 
 const TextInput = styled.input`
+  width: calc(100% - 2rem);
   border: 0;
   display: block;
   padding: 1rem;
@@ -13,13 +12,16 @@ const TextInput = styled.input`
 
 const Input = (props) => {
   return (
-    <InputWrapper>
+    <div>
       <TextInput
         id={props.id}
         onChange={props.onChange} 
         type={props.type} 
         placeholder={props.placeholder}/>
-    </InputWrapper>
+      { props.error &&
+        <ErrorTooltip>{props.errorText}</ErrorTooltip>
+      }
+    </div>
   )
 }
 
