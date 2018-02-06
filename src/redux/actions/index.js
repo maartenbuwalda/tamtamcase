@@ -3,3 +3,12 @@ export const getInstagramFeed = () => {
     type: 'GET_INSTAGRAM_FEED_START'
   }
 }
+
+export const submitContactForm = (form) => {
+  return {
+    type: 'SUBMIT_CONTACT_FORM_START',
+    payload: {
+      form
+    }
+  }
+}

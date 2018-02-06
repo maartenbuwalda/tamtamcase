@@ -16,7 +16,9 @@ const Image = styled.div`
 `
 
 const ImageDescription = styled.figcaption`
+  color: ${colors.textGray};
   padding: 1rem;
+  line-height: 1.5rem;
   text-align: left;
 
   &:empty {

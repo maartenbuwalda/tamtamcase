@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import { instagramFeedReducer } from './instagramFeed'
+import { contactFormReducer } from './contactForm'
 
 const reducers = combineReducers({
-  instagramFeed: instagramFeedReducer
+  instagramFeed: instagramFeedReducer,
+  contactForm: contactFormReducer
 })
 
 export { reducers };

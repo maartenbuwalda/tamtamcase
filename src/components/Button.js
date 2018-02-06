@@ -36,7 +36,9 @@ const ButtonWrapper = styled.figure`
 
 const Button = (props) => {
   return (
-    <ButtonWrapper type={props.type}>
+    <ButtonWrapper 
+      type={props.type}
+      onClick={props.onClick}>
       {props.children}
     </ButtonWrapper>
   )

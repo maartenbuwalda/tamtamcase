@@ -3,7 +3,7 @@ import Header from './Header'
 import Footer from './Footer'
 import HomeContainer from '../redux/containers/HomeContainer'
 import People from './People'
-import Contact from './Contact'
+import ContactContainer from '../redux/containers/ContactContainer'
 import styled from 'styled-components'
 import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom'
 
@@ -22,7 +22,6 @@ const AppWrapper = styled.div`
 class App extends Component {
   componentWillMount(){
     this.props.getInstagramFeed()
-    // console.log('hello')
   }
 
   render() {
@@ -34,7 +33,7 @@ class App extends Component {
             <Redirect exact from='/' to='/home'/>
             <Route path='/home' render={ () => <HomeContainer/> }/>
             <Route path='/people' render={ () => <People/> }/>
-            <Route path='/contact' render={ () => <Contact/> }/>
+            <Route path='/contact' render={ () => <ContactContainer/> }/>
           </Switch>
           <Footer/>
         </AppWrapper>

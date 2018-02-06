@@ -70,24 +70,73 @@ const InputGroup = styled.div`
 `
 
 class Contact extends Component {
+  constructor(){
+    super()
+    this.state = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      message: ''
+    }
+  }
+
+  _handleChange = (e) => {
+    let form = { ...this.state }
+    form[e.target.id] = e.target.value
+    this.setState(form)
+  }
+
   render() {
+    let errors = this.props.contactForm.errors
+
     return (
       <ContactWrapper>
         <h1>We would love to hear from you</h1>
         <ContactForm>
           <InputGroup>
-            <Input type='name' placeholder='First name'/>
-            <Input type='name' placeholder='Last name'/>
+            <Input 
+              error={errors.firstName}
+              errorText='We need your first name.'
+              onChange={this._handleChange} 
+              id='firstName' 
+              type='name' 
+              placeholder='First name'/>
+            <Input 
+              error={errors.lastName}
+              errorText='We need your last name.'
+              onChange={this._handleChange} 
+              id='lastName' 
+              type='name' 
+              placeholder='Last name'/>
           </InputGroup>
           <InputGroup>
-            <Input type='email' placeholder='Your e-mail address'/>
-            <Input type='tel' placeholder='Your phone number (optional)'/>
+            <Input
+              error={errors.email}
+              errorText='Please use a valid e-mail address.'
+              onChange={this._handleChange} 
+              id='email' 
+              type='email' 
+              placeholder='Your e-mail address'/>
+            <Input
+              error={errors.phone}
+              errorText='This is not a number.'
+              onChange={this._handleChange} 
+              id='phone' 
+              type='tel' 
+              placeholder='Your phone number (optional)'/>
           </InputGroup>
           <InputGroup>
-            <TextArea rows='6' placeholder='Your message...'/>
+            <TextArea
+              error={errors.message}
+              errorText="Sorry, your message can't be empty"
+              onChange={this._handleChange} 
+              id='message' 
+              rows='6' 
+              placeholder='Your message...'/>
           </InputGroup>
         </ContactForm>
-        <Button type='red'>Send</Button>
+        <Button onClick={() => this.props.submitContactForm(this.state)} type='red'>Send</Button>
       </ContactWrapper>
     );
   }

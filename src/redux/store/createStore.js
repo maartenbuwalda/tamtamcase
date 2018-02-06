@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import { reducers } from '../reducers'
 import instagramFeed from '../middleware/instagramFeed'
+import formValidation from '../middleware/formValidation'
 
 import thunk from 'redux-thunk'
 
@@ -10,7 +11,8 @@ if (window.devToolsExtension) {
   middleware = compose(
     applyMiddleware(
       thunk,
-      instagramFeed
+      instagramFeed,
+      formValidation
     ),
     window.devToolsExtension()
   )
@@ -18,7 +20,8 @@ if (window.devToolsExtension) {
   middleware = compose(
     applyMiddleware(
       thunk,
-      instagramFeed
+      instagramFeed,
+      formValidation
     )
   )
 }
