@@ -16,6 +16,7 @@ const FooterWrapper = styled.footer`
   align-items: center;
 
   div {
+    transition: all .3s;
     width: 1.5rem;
     height: 1.5rem;
     background-repeat: no-repeat;

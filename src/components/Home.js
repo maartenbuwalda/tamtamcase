@@ -3,15 +3,7 @@ import styled from 'styled-components'
 import colors from '../constants/colors'
 import ImageCard from './ImageCard'
 import { media } from '../constants/breakpoints'
-import ArrowIcon from './icons/ArrowIcon'
-import ScrollIcon from './icons/ScrollIcon'
-
-const HomeWrapper = styled.div`
-`
-
-const Carousel = styled.div`
-  padding-bottom: 3rem;
-`
+import Carousel from './Carousel'
 
 const Introduction = styled.div`
   background-color: ${colors.white};
@@ -63,13 +55,8 @@ const FeedWrapper = styled.div`
 class Home extends Component {
   render() {
     return (
-      <HomeWrapper>
-        <Carousel> 
-          <h2>Walibi</h2>
-          <ArrowIcon type='left'/>
-          <ArrowIcon type='right'/>
-          <ScrollIcon/>
-        </Carousel>
+      <div>
+        <Carousel/>
         <Introduction>
           <h1>We are Tam Tam</h1>
           <p>Tam Tam is a full service digital agency focusing on Dutch Digital Service Design. We combine strategy, design, technology and interaction to make the digital interactions between company and customer valuable and memorable. We work for awesome brands with a team of 120 digitals from our office in Amsterdam. Making great work and having a blast doing it. That’s what we believe in.</p>
@@ -89,7 +76,7 @@ class Home extends Component {
             })}
           </FeedWrapper>
         </InstagramFeed>
-      </HomeWrapper>
+      </div>
     );
   }
 }

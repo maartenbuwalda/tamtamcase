@@ -16,7 +16,7 @@ const NotificationWrapper = styled.div`
 const Notification = (props) => {
   return (
     <NotificationWrapper>
-      { props.type === 'error' ? <ErrorIcon/> : props.type === 'success' ? <SuccessIcon/> : undefined}
+      { props.type === 'error' ? <ErrorIcon color='black-faded'/> : props.type === 'success' ? <SuccessIcon color='black-faded'/> : undefined}
       <span>{props.children}</span>
     </NotificationWrapper>
   )

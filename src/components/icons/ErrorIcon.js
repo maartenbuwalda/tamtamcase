@@ -4,7 +4,7 @@ import IconBackground from './IconBackground'
 
 const ErrorIcon = (props) => {
   return (
-    <IconBackground>
+    <IconBackground color={props.color}>
       <img src={error} alt='error icon'/>
     </IconBackground>
   )

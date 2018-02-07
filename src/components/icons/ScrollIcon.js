@@ -10,8 +10,9 @@ import { media } from '../../constants/breakpoints'
 
 const Icon = styled.div`
   transition: all .3s;
-  width: 2rem;
-  height: 2rem;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
   border-radius: 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -33,7 +34,7 @@ const Icon = styled.div`
 
       &:before {
         opacity: 1;
-        transform: translateY(1.5rem);
+        transform: translateY(2.5rem);
       }
     }
 
@@ -42,8 +43,8 @@ const Icon = styled.div`
       opacity: 0;
       position: absolute;
       content: '';
-      width: 2rem;
-      height: 2rem;
+      width: 3rem;
+      height: 3rem;
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 40%;

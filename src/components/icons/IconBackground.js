@@ -5,11 +5,12 @@ const IconBackground = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 100%;
   margin-right: 1rem;
   transition: all .3s;
+  cursor: pointer;
 
   background-color: ${props => {
     switch(props.color){

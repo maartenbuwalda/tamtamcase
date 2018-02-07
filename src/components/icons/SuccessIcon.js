@@ -4,7 +4,7 @@ import IconBackground from './IconBackground'
 
 const SuccessIcon = (props) => {
   return (
-    <IconBackground>
+    <IconBackground color={props.color}>
       <img src={checkWhite} alt='success icon'/>
     </IconBackground>
   )
