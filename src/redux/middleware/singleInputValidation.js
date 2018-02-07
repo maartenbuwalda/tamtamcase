@@ -13,47 +13,28 @@ const singleInputValidation = store => next => action => {
     let { input, type, id } = action.payload
     let validated = { ...store.getState().contactForm.validated }
 
-    function invalid(){
-      validated[id] = false
-    }
-
-    function valid(){
-      validated[id] = true
+    function validate(method){
+      if(method(input)){
+        validated[id] = true
+      } else {
+        validated[id] = false
+      }
     }
 
     switch(type){
       case 'name':
-        if(validName(input)){
-          valid()
-          break;
-        } else {
-          invalid()
-          break;
-        }
+        validate(validName)
+        break;
       case 'email':
-        if(validEmail(input)){
-          valid()
-          break;
-        } else {
-          invalid()
-          break;
-        }
+        validate(validEmail)
+        break;
       case 'phone':
-        if(validNumber(input)){
-          valid()
-          break;
-        } else {
-          invalid()
-          break;
-        }
+        validate(validNumber)
+        break;
       case 'message':
-        if(validMessage(input)){
-          valid()
-          break;
-        } else {
-          invalid()
-          break;
-        }
+        validate(validMessage)
+        break;
+      default:
     }
     
     dispatch({

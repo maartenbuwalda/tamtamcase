@@ -69,9 +69,10 @@ class Home extends Component {
           <h2>Follow us on Instagram</h2>
           <strong>@tamtamnl</strong>
           <FeedWrapper>
-            {this.props.instagramFeed.data.map((instagramPost) => {
+            {this.props.instagramFeed.data.map((instagramPost, i) => {
               return (
                 <ImageCard 
+                  key={i}
                   text={instagramPost.caption ? instagramPost.caption.text : ''}
                   image={instagramPost.images.standard_resolution.url}
                 />

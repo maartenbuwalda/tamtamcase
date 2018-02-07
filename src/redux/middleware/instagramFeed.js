@@ -10,11 +10,10 @@ const instagramFeed = store => next => action => {
   next(action)
   const dispatch = store.dispatch
   const accessToken = '2265267182.a7f9bd6.fb52f8188d9041fdb44633ae37203239'
-  const userId = '176412031' //tamtamnl
-  const myId = '2265267182'
+  const userId = '2265267182' //tamtamnl: 176412031
 
   if(action.type === GET_INSTAGRAM_FEED_START){
-    axios.get(`https://api.instagram.com/v1/users/${myId}/media/recent/?access_token=${accessToken}`)
+    axios.get(`https://api.instagram.com/v1/users/${userId}/media/recent/?access_token=${accessToken}`)
       .then((response) => {
         dispatch({
           type: GET_INSTAGRAM_FEED_SUCCESS,

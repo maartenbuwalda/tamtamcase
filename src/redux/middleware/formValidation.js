@@ -5,7 +5,6 @@ import {
   SUBMIT_CONTACT_FORM_END
 } from '../actiontypes'
 
-import { Redirect } from 'react-router-dom'
 import { validName, validEmail, validMessage, validNumber } from '../../helpers'
 
 const formValidation = store => next => action => {

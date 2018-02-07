@@ -2,7 +2,6 @@ import React  from 'react'
 import styled from 'styled-components'
 import colors from '../constants/colors'
 import error from '../images/icons/error.svg'
-import checkGreen from '../images/icons/check-green.svg'
 import checkWhite from '../images/icons/check-white.svg'
 
 const IconWrapper = styled.div`
@@ -18,10 +17,10 @@ const IconWrapper = styled.div`
 
 function renderIcon(type){
   switch(type){
-    case 'error': return <img src={error}/>
+    case 'error': return <img src={error} alt='error icon'/>
     case 'success': 
     default:
-      return <img src={checkWhite}/>
+      return <img src={checkWhite} alt='success icon'/>
   }
 }
 

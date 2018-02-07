@@ -116,7 +116,7 @@ class Header extends Component {
         <HiddenInput id='navigation-toggle' type='checkbox'/>
         <IconWrapper>
           <MenuIcon htmlFor='navigation-toggle'/>
-          <img src={logo}/>
+          <img src={logo} alt='Tam Tam logo'/>
         </IconWrapper>
         <Navigation>
           <NavLink onClick={this._closeMenu} activeClassName='selected' to='/home'>Home</NavLink>

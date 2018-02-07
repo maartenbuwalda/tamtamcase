@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Button from './Button'
 import Input from './Input'
 import TextArea from './TextArea'
-import colors from '../constants/colors'
 import { media } from '../constants/breakpoints'
 
 const ContactFormWrapper = styled.div`
