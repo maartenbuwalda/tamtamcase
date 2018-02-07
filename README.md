@@ -1,4 +1,4 @@
-This is a repository for a front-end assignment provided by Tam Tam. It will be deployed here: [http://maartenbuwalda.com/tamtamcase](http://maartenbuwalda.com/tamtamcase).
+This is a repository for a front-end assignment provided by Tam Tam. It will be deployed here: [http://tamtamcase.maartenbuwalda.com/](http://tamtamcase.maartenbuwalda.com/).
 
 Note: The time limit to finish this assignment was between 16 - 24 hours. I worked approximately 18-20 hours on this, spread over 3 days.
 
