@@ -2,6 +2,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import { reducers } from '../reducers'
 import instagramFeed from '../middleware/instagramFeed'
 import formValidation from '../middleware/formValidation'
+import singleInputValidation from '../middleware/singleInputValidation'
 
 import thunk from 'redux-thunk'
 
@@ -12,7 +13,8 @@ if (window.devToolsExtension) {
     applyMiddleware(
       thunk,
       instagramFeed,
-      formValidation
+      formValidation,
+      singleInputValidation
     ),
     window.devToolsExtension()
   )
@@ -21,7 +23,8 @@ if (window.devToolsExtension) {
     applyMiddleware(
       thunk,
       instagramFeed,
-      formValidation
+      formValidation,
+      singleInputValidation
     )
   )
 }

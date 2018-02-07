@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Button from './Button'
-import Input from './Input'
-import TextArea from './TextArea'
+import Notification from './Notification'
+import ContactForm from './ContactForm'
 import colors from '../constants/colors'
 import { media } from '../constants/breakpoints'
 
@@ -10,6 +9,8 @@ const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 620px;
+  margin: auto;
   
   h1 {
     margin: 1rem 0;
@@ -26,114 +27,23 @@ const ContactWrapper = styled.div`
   }
 `
 
-// Tried to use grid here, but it seems to have a bug in Chrome in combination with inputs
-const ContactForm = styled.form`
-  margin: 0 auto 1rem;
-  width: 100%;
-  max-width: 620px;
-  display: grid;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 2rem 0 1rem;
 
-  textarea {
-    margin: 1rem auto 0;
-    width: calc(100% - 2rem);
-  }
-
-  ${media.tablet`
-    grid-row-gap: 1rem;
-    margin-bottom: 2rem;
-  `}
-`
-
-const InputGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  div {
-    width: calc(100% - 2rem);
-    margin: 0 auto 1rem;
-  }
-
-  ${media.tablet`
-    flex-direction: row;
-    justify-content: center;
-
-    &.multi-group div {
-      width: calc(50% - 1.5rem);
-      margin: 0 .5rem;
-    }
-  `}
-`
 
 class Contact extends Component {
-  constructor(){
-    super()
-    this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      message: ''
-    }
-  }
-
-  _handleChange = (e) => {
-    let form = { ...this.state }
-    form[e.target.id] = e.target.value
-    this.setState(form)
-  }
 
   render() {
-    let errors = this.props.contactForm.errors
-
+    let { validated, isSubmitted } = this.props.contactForm
     return (
       <ContactWrapper>
         <h1>We would love to hear from you</h1>
-        <ContactForm>
-          <InputGroup className='multi-group'>
-            <Input 
-              error={errors.firstName}
-              errorText='We need your first name.'
-              onChange={this._handleChange} 
-              id='firstName' 
-              type='name' 
-              placeholder='First name'/>
-            <Input 
-              error={errors.lastName}
-              errorText='We need your last name.'
-              onChange={this._handleChange} 
-              id='lastName' 
-              type='name' 
-              placeholder='Last name'/>
-          </InputGroup>
-          <InputGroup className='multi-group'>
-            <Input
-              error={errors.email}
-              errorText='Please use a valid e-mail address.'
-              onChange={this._handleChange} 
-              id='email' 
-              type='email' 
-              placeholder='Your e-mail address'/>
-            <Input
-              error={errors.phone}
-              errorText='This is not a number.'
-              onChange={this._handleChange} 
-              id='phone' 
-              type='tel' 
-              placeholder='Your phone number (optional)'/>
-          </InputGroup>
-          <InputGroup>
-            <TextArea
-              error={errors.message}
-              errorText="Sorry, your message can't be empty"
-              onChange={this._handleChange} 
-              id='message' 
-              rows='6' 
-              placeholder='Your message...'/>
-          </InputGroup>
-        </ContactForm>
-        <Button onClick={() => this.props.submitContactForm(this.state)} type='red'>Send</Button>
+        { Object.values(validated).includes(false) && isSubmitted 
+          ? <Notification type='error'>Please complete the form and try again.</Notification>
+          : undefined
+        }
+        <ContactForm 
+          validated={validated} 
+          validateSingleInput={this.props.validateSingleInput} 
+          submitContactForm={this.props.submitContactForm}/>
       </ContactWrapper>
     );
   }
