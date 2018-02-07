@@ -6,16 +6,16 @@ import ScrollIcon from './icons/ScrollIcon'
 import walibi from '../images/walibi.jpg'
 
 const CarouselWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: calc(100vh - 7rem);
   padding-bottom: 3rem;
   background-image: url(${walibi});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
 `
 

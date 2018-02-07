@@ -8,12 +8,11 @@ import { media } from '../constants/breakpoints'
 const ContactFormWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
+  width: 100%;
   padding-bottom: 3rem;
 `
 
-// Tried to use grid here, but it seems to have a bug in Chrome in combination with inputs
 const Form = styled.form`
   margin: 0 auto 1rem;
   width: 100%;
