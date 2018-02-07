@@ -5,6 +5,7 @@ import {
   SUBMIT_CONTACT_FORM_END
 } from '../actiontypes'
 
+import { Redirect } from 'react-router-dom'
 import { validName, validEmail, validMessage, validNumber } from '../../helpers'
 
 const formValidation = store => next => action => {
@@ -54,6 +55,10 @@ const formValidation = store => next => action => {
       dispatch({ type: SUBMIT_CONTACT_FORM_SUCCESS })
     }
   
+  }
+
+  if(action.type === SUBMIT_CONTACT_FORM_SUCCESS){
+    
   }
 
   if(action.type === SUBMIT_CONTACT_FORM_SUCCESS || action.type === SUBMIT_CONTACT_FORM_ERROR){

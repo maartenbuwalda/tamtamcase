@@ -1,12 +1,15 @@
 import Contact from '../../components/Contact'
 import { connect } from 'react-redux'
-import { submitContactForm, validateSingleInput } from '../actions'
+import { submitContactForm, validateSingleInput, resetContactForm } from '../actions'
 
 const mapStateToProps = state => {return {
   contactForm: state.contactForm
 }}
 
 const mapDispatchToProps = dispatch => {return {
+  resetContactForm: (form) => {
+    dispatch(resetContactForm())
+  },
   submitContactForm: (form) => {
     dispatch(submitContactForm(form))
   },

@@ -1,7 +1,8 @@
 import {
   VALIDATE_SINGLE_INPUT,
   GET_INSTAGRAM_FEED_START,
-  SUBMIT_CONTACT_FORM_START
+  SUBMIT_CONTACT_FORM_START,
+  RESET_CONTACT_FORM
 } from '../actiontypes'
 
 export const getInstagramFeed = () => {
@@ -16,6 +17,12 @@ export const submitContactForm = (form) => {
     payload: {
       form
     }
+  }
+}
+
+export const resetContactForm = () => {
+  return {
+    type: RESET_CONTACT_FORM
   }
 }
 

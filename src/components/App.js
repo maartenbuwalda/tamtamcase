@@ -3,6 +3,7 @@ import Header from './Header'
 import Footer from './Footer'
 import HomeContainer from '../redux/containers/HomeContainer'
 import People from './People'
+import MessageSent from './MessageSent'
 import ContactContainer from '../redux/containers/ContactContainer'
 import styled from 'styled-components'
 import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom'
@@ -34,6 +35,7 @@ class App extends Component {
             <Route path='/home' render={ () => <HomeContainer/> }/>
             <Route path='/people' render={ () => <People/> }/>
             <Route path='/contact' render={ () => <ContactContainer/> }/>
+            <Route path='/message-sent' render={ () => <MessageSent/> }/>
           </Switch>
           <Footer/>
         </AppWrapper>
