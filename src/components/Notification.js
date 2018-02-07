@@ -1,7 +1,8 @@
 import React  from 'react'
 import styled from 'styled-components'
 import colors from '../constants/colors'
-import Icon from './Icon'
+import ErrorIcon from './icons/ErrorIcon'
+import SuccessIcon from './icons/SuccessIcon'
 
 const NotificationWrapper = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ const NotificationWrapper = styled.div`
 const Notification = (props) => {
   return (
     <NotificationWrapper>
-      <Icon type={props.type}/>
+      { props.type === 'error' ? <ErrorIcon/> : props.type === 'success' ? <SuccessIcon/> : undefined}
       <span>{props.children}</span>
     </NotificationWrapper>
   )
